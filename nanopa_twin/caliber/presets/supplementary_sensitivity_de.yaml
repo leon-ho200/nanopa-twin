@@ -1,0 +1,7 @@
+name: supplementary_sensitivity_de
+data:
+  dataset: nhanes
+  n_subjects: 1461
+model:
+  embed_dim: 256
+  state_dim: 256

@@ -1,0 +1,7 @@
+name: ablation_no_pae_cmts
+data:
+  dataset: nhanes
+  n_subjects: 1461
+model:
+  use_photoacoustic: false
+  use_gated_fusion: false

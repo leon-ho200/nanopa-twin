@@ -1,0 +1,33 @@
+name: smoke
+note: "unit-test smoke only; not for reporting"
+model:
+  n_wavelength: 3
+  n_sensor: 8
+  n_time: 64
+  n_biomarker: 8
+  embed_dim: 16
+  state_dim: 16
+  hidden_dim: 12
+  proj_dim: 12
+  interval_dim: 8
+  encoder_channels: 12
+  encoder_blocks: 2
+data:
+  dataset: nhanes
+  n_subjects: 24
+  min_visits: 1
+  max_visits: 3
+  pa_availability: 0.7
+  horizons: [12, 24]
+  val_fraction: 0.25
+  seed: 0
+optim:
+  lr: 0.001
+  weight_decay: 0.0001
+  batch_size: 8
+  max_epochs: 2
+  patience: 5
+  pae_pretrain_epochs: 1
+  folds: 2
+seeds: [0]
+device: cpu

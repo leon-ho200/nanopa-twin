@@ -1,0 +1,6 @@
+name: ablation_concat_fusion
+data:
+  dataset: nhanes
+  n_subjects: 1461
+model:
+  use_gated_fusion: false

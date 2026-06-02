@@ -1,0 +1,6 @@
+name: ablation_no_time_embed
+data:
+  dataset: nhanes
+  n_subjects: 1461
+model:
+  use_time_embedding: false

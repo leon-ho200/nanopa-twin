@@ -1,0 +1,6 @@
+name: ablation_no_spectral
+data:
+  dataset: nhanes
+  n_subjects: 1461
+model:
+  use_spectral_prior: false

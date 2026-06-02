@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nanopa-twin"
+version = "0.1.0"
+description = "NIR-II photoacoustic nanoprobe digital twin for bone-metabolism monitoring and osteoporosis progression"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "NanoPA-Twin authors" }]
+dependencies = [
+    "torch>=2.1",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "pyyaml>=6.0",
+    "tyro>=0.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.3",
+    "black>=24.1",
+    "isort>=5.13",
+    "mypy>=1.9",
+    "pytest>=8.0",
+]
+
+[project.scripts]
+nanopa-twin = "nanopa_twin.dial.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["nanopa_twin*"]
+
+[tool.setuptools.package-data]
+nanopa_twin = ["py.typed", "caliber/presets/*.yaml"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["nanopa_twin"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["nanopa_twin"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["nanopa_twin"]
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["scipy.*", "sklearn.*", "yaml"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

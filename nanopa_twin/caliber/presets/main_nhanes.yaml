@@ -1,0 +1,39 @@
+name: main_nhanes
+model:
+  n_wavelength: 3
+  n_sensor: 128
+  n_time: 2048
+  n_biomarker: 8
+  embed_dim: 128
+  state_dim: 128
+  hidden_dim: 256
+  proj_dim: 128
+  interval_dim: 16
+  encoder_channels: 64
+  encoder_blocks: 4
+  n_class: 3
+data:
+  dataset: nhanes
+  n_subjects: 1461
+  min_visits: 1
+  max_visits: 3
+  pa_availability: 1.0
+  horizons: [12, 24]
+  val_fraction: 0.2
+  seed: 42
+optim:
+  lr: 0.0003
+  weight_decay: 0.0001
+  batch_size: 32
+  max_epochs: 200
+  patience: 20
+  pae_pretrain_epochs: 50
+  folds: 5
+loss:
+  lambda_cls: 1.0
+  lambda_reg: 0.5
+  lambda_prog: 1.0
+  lambda_spec: 0.3
+  focal_gamma: 2.0
+seeds: [42, 123, 456, 789, 2024]
+device: cuda

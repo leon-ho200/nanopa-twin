@@ -1,0 +1,6 @@
+name: ablation_no_mssp
+data:
+  dataset: nhanes
+  n_subjects: 1461
+model:
+  projection: mlp

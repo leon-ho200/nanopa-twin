@@ -1,0 +1,6 @@
+name: supplementary_sensitivity_dh
+data:
+  dataset: nhanes
+  n_subjects: 1461
+model:
+  hidden_dim: 128

@@ -1,0 +1,6 @@
+name: ablation_s4_to_mlp
+data:
+  dataset: nhanes
+  n_subjects: 1461
+model:
+  projection: mlp

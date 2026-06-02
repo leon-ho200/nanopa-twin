@@ -1,0 +1,6 @@
+name: ablation_transformer_core
+data:
+  dataset: nhanes
+  n_subjects: 1461
+model:
+  temporal_core: transformer

@@ -1,0 +1,6 @@
+name: ablation_no_pae
+data:
+  dataset: nhanes
+  n_subjects: 1461
+model:
+  use_photoacoustic: false

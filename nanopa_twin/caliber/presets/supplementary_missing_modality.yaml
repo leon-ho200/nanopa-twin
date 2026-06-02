@@ -1,0 +1,5 @@
+name: supplementary_missing_modality
+data:
+  dataset: nhanes
+  n_subjects: 1461
+  pa_availability: 0.25
