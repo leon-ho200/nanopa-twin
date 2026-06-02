@@ -186,25 +186,8 @@ nanopa-twin forecast --preset main_nhanes --checkpoint runs/main_nhanes.pt
 
 None are distributed. Train with the commands above, or request weights from the authors.
 
-### Code availability (verbatim from the manuscript)
-
-> Full details on the training script, data preprocessing pipeline, and configuration file(s) are
-> provided at https://github.com/[ANONYMIZED]/NanoPA-Twin.
-
 ### Ethics
 
 The study collected no primary data and involved no human or animal subjects. All datasets (Harvard
 BMD, NHANES 2017-2020, and the k-Wave photoacoustic simulation) are publicly available. Downstream use
 requires domain-specific validation.
-
-### Citation
-
-```bibtex
-@article{zhao_nanopa_twin,
-  title   = {NanoPA-Twin: NIR-II Photoacoustic Nanoprobe-Enabled Digital Twins for Real-Time Bone
-             Metabolism Monitoring and Osteoporosis Progression Prediction},
-  author  = {Zhao, Jiaxin and Xiang, Zihan and She, Jiang},
-  journal = {IEEE Journal of Biomedical and Health Informatics},
-  year    = {2025}
-}
-```
